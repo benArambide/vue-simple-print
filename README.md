@@ -1,24 +1,37 @@
-# vue-simple-print
+# VueSimplePrint
+This is a simple directive to print html section with vue.
 
-## Project setup
-```
-npm install
-```
+## DEMO
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+[Try the Demo](https://josueaqp92.github.io/vue-simple-print/)
 
-### Compiles and minifies for production
+## Installation
+
 ```
-npm run build
+npm install vue-simple-print --save
 ```
 
-### Lints and fixes files
-```
-npm run lint
+
+## Usage
+
+Import the module into your `main.js` file.
+
+```ts
+import VueSimplePrintPlugin from 'vue-simple-print';
+
+Vue.use(VueSimplePrintPlugin);
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+And you can use the directive in your app
+```vue
+<template>
+<div>
+    <button
+    v-simple-print="'contentToPrint'"
+    >Print Content</button>
+    <div id="contentToPrint">
+        your content...
+    </div>
+</div>
+</template>
+```

@@ -2,6 +2,7 @@
   "name": "vue-simple-print",
   "version": "0.1.0",
   "private": true,
+  "main": "./dist/vueSimplePrint.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build:site": "vue-cli-service build",
