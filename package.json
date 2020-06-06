@@ -19,7 +19,7 @@
     "vue": "^2.6.11"
   },
   "homepage": "https://josueaqp92.github.io/vue-simple-print/",
-  "keywords": ["angualar", "print", "directive", "print-directive", "ngx-print", "print-html", "print-section", "ngx", "printable"],
+  "keywords": ["vue", "print", "directive", "print-directive", "vue-print", "print-html", "print-section", "v-print", "printable"],
   "author": {
     "name": "Josue Arambide",
     "url": "josue@josuearambide.com"
