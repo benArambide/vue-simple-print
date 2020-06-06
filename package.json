@@ -4,12 +4,24 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build:site": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "build:lib": "vue-cli-service build --target lib --name vueSimplePrint src/plugins/VueSimplePrintPlugin.js",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/josueaqp92/vue-simple-print"
   },
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
+  },
+  "homepage": "https://josueaqp92.github.io/vue-simple-print/",
+  "keywords": ["angualar", "print", "directive", "print-directive", "ngx-print", "print-html", "print-section", "ngx", "printable"],
+  "author": {
+    "name": "Josue Arambide",
+    "url": "josue@josuearambide.com"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",
