@@ -19,10 +19,16 @@ steps:
     npm install
     npm run build:site
   displayName: 'npm install and build:site'
-- task: AzureFileCopy@4
+
+- task: ArchiveFiles@2
   inputs:
-    SourcePath: 'dist'
-    azureSubscription: 'Azure subscription 1(86d25dc2-bd08-4b71-b99e-e0f324f37cb4)'
-    Destination: 'AzureBlob'
-    storage: 'cimatest'
-    ContainerName: '$web'
+    rootFolderOrFile: '$(Build.BinariesDirectory)/dist'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
