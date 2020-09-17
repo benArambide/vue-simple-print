@@ -17,8 +17,8 @@ steps:
 
 - script: |
     npm install
-    npm run build
-  displayName: 'npm install and build'
+    npm run build:site
+  displayName: 'npm install and build:site'
 - task: AzureFileCopy@4
   inputs:
     SourcePath: 'dist'
